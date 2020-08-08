@@ -22,7 +22,7 @@ exports.handler = function(event, context, callback) {
             };
 
             var options = {
-                url = 'https://' + process.env.DOMAIN + '/tokeninfo',
+                url: 'https://' + process.env.DOMAIN + '/tokeninfo',
                 method: 'POST',
                 json: true,
                 body: body
