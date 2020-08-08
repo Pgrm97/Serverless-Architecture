@@ -1,0 +1,16 @@
+{
+  "name": "transcode-video",
+  "version": "1.0.0",
+  "description": "Transcode Video Function",
+  "main": "index.js",
+  "scripts": {
+    "test": "run-local-lambda --file index.js --event tests/event.json",
+    "deploy": "aws lambda update-function-code --function-name arn:aws:lambda:us-east-1:288811644934:function:transcode-video --zip-file fileb://Lambda-Deployment.zip",
+    "predeploy": "zip -r Lambda-Deployment.zip *"
+  },
+  "dependencies": {
+    "aws-sdk": "2.633.0"
+  },
+  "author": "Pedro Guillermo Rodríguez",
+  "license": "ISC"
+}
