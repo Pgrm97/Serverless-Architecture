@@ -4,8 +4,8 @@
   "description": "Youtube Project",
   "main": "index.js",
   "local-web-server": {
-  	"port": 8100,
-  	"forbid": "*.json"
+    "port": 8100,
+    "forbid": "*.json"
   },
   "scripts": {
     "start": "ws",
