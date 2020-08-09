@@ -1,7 +1,7 @@
 {
-  "name": "user-profile",
+  "name": "custom-authorizer",
   "version": "1.0.0",
-  "description": "User Profile Function",
+  "description": "This Lambda function is used to authorize requests",
   "main": "index.js",
   "scripts": {
     "test": "run-local-lambda --file index.js --event tests/event.json",
