@@ -1,7 +1,9 @@
 "use strict";
 
 var AWS = require("aws-sdk");
+AWS.config.update({ region: "us-east-1" });
 var async = require("async");
+var email = require("./email");
 
 var s3 = new AWS.S3();
 
@@ -35,8 +37,8 @@ function createList(data, next) {
   }
 
   var result = {
-    baseUrl: process.env.BASE_URL,
-    bucket: process.env.BUCKET,
+    baseUrl: process.env.BASE_URL || "https://s3.amazonaws.com",
+    bucket: process.env.BUCKET || "serverless-video-transcoded-ltdw",
     urls: urls,
   };
 
@@ -44,6 +46,12 @@ function createList(data, next) {
 }
 
 exports.handler = function (event, context, callback) {
+  /*email.send(
+    ["sebastianjorgecruz25@outlook.com"],
+    "sebastianjorgecruz25@gmail.com",
+    "Subject",
+    "Body"
+  );*/
   async.waterfall(
     [createBucketParams, getVideosFromBucket, createList],
     function (err, result) {
