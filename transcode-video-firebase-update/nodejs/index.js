@@ -20,7 +20,7 @@ exports.handler = function(event, context, callback) {
     //Remplazando los espacios en el nombre del video por un simbolo de mas (+).
     var sourceKey = decodeURIComponent(key.replace(/\+/g, ' '));
 
-    var uniqueVideoKey = outputKey.split('/')[0];
+    var uniqueVideoKey = sourceKey.split('/')[0];
 
     var database = firebase.database().ref();
 
