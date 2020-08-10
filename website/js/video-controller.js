@@ -17,7 +17,7 @@ var videoController = {
 	},
 	getVideoList: function() {
 		var that = this;
-		var url = this.data.config.apiBaseUrl + '/videos?encoding=' + encodeURIComponent('720p');
+		var url = this.data.config.apiBaseUrl + '/videos?encoding=' + encodeURIComponent('');
 
 		$.get(url, function(data, status){
 			that.updateVideoFrontpage(data);
