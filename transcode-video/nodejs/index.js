@@ -42,6 +42,8 @@ exports.handler = function(event, context, callback) {
     //Quita la extension del archivo.
     var outputKey = sourceKey.split('.')[0];
 
+    var uniqueVideoKey = outputKey.split('/')[0];
+
     var params = {
         PipelineId: '1596640623976-23uz38',
         Input: {
@@ -70,6 +72,6 @@ exports.handler = function(event, context, callback) {
         }
 
         console.log("Transcoded Successful!");
-        pushVideoEntryToFirebase(outputKey, callback);
+        pushVideoEntryToFirebase(uniqueVideoKey, callback);
     });
 };
