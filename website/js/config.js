@@ -7,5 +7,5 @@ var configConstants = {
     apiKey: "AIzaSyDhRZEcegIVWiXiqlUCZ7shRY6wmc49fo0",
     databaseURL: "https://hour-video-153f5.firebaseio.com/",
   },
-  apiBaseUrl: "https://94jahhku2j.execute-api.us-east-1.amazonaws.com/dev",
+  apiBaseUrl: "https://41c9sxs6vf.execute-api.us-east-1.amazonaws.com/dev",
 };
