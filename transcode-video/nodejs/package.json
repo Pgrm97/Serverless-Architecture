@@ -9,7 +9,8 @@
     "predeploy": "zip -r Lambda-Deployment.zip *"
   },
   "dependencies": {
-    "aws-sdk": "2.633.0"
+    "aws-sdk": "2.633.0",
+    "firebase": "^7.17.2"
   },
   "author": "Pedro Guillermo Rodríguez",
   "license": "ISC"
