@@ -71,7 +71,7 @@ exports.handler = function(event, context, callback) {
             return;
         }
 
-        console.log("Transcoded Successful!");
+        console.log("Started transcoding successfully!");
         pushVideoEntryToFirebase(uniqueVideoKey, callback);
     });
 };
