@@ -4,5 +4,5 @@ Webapp que busca replicar youtube. Se pueden subir videos que se almacenan en AW
 
 ## Stack
 
-JS frontend con AWS Lambda, S3, API Gateway, etc
+JS frontend con AWS Lambda, S3, API Gateway, etc y base de datos Firebase
 
